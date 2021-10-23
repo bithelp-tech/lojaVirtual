@@ -4,271 +4,273 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 # BDD cadastro de cliente Loja Virtual
 
 
-## **Funcionalidade:** Cadastro de novo cliente.
+## **Funcionalidade:** Cadastro de novo cliente.<br/><br/>
 
-**PARA** que eu tenha um registro na empresa.
-**COMO** um novo cliente.
-**PRECISO** preencher meus dados no formulário.
+**PARA** que eu tenha um registro na empresa.<br/>
+**COMO** um novo cliente.<br/>
+**PRECISO** preencher meus dados no formulário.<br/>
+<br/><br/>
 
+### **Cenário:** preenchimento do nome<br/><br/>
 
-### **Cenário:** preenchimento do nome
+**Contexto:** campo sem erros<br/>
+**DADO** que o nome esteja correto<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo confirmação de registro<br/>
+<br/><br/>
 
-**Contexto:** campo sem erros
-**DADO** que o nome esteja correto
-**QUANDO** envio o formulário
-**ENTÃO** recebo confirmação de registro
+**Contexto:** campo ficou em branco<br/>
+**DADO** o nome esteja a preencher<br/>
+**QUANDO** envio o formulário <br/>
+**ENTÃO** recebo uma notificação<br/>
+<br/><br/>
 
+**Contexto:** campo nome inválido por excesso de texto<br/>
+**DADO** ocorra preenchimento involuntário<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/>
 
-**Contexto:** campo ficou em branco
-**DADO** o nome esteja a preencher
-**QUANDO** envio o formulário 
-**ENTÃO** recebo uma notificação
+**Contexto:** campo nome muito curto<br/>
+**DADO** que não foi digitado o nome completo<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/>
 
+**Contexto:** campo nome contendo números<br/>
+**DADO** que confundi o campo nome com números<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/>
 
-**Contexto:** campo nome inválido por excesso de texto
-**DADO** ocorra preenchimento involuntário
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
+**Contexto:** campo nome contendo email<br/>
+**DADO** que preencha email no campo nome<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/>
 
-**Contexto:** campo nome muito curto
-**DADO** que não foi digitado o nome completo
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
-
-**Contexto:** campo nome contendo números
-**DADO** que confundi o campo nome com números
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
-
-**Contexto:** campo nome contendo email
-**DADO** que preencha email no campo nome
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
-
-**Contexto:** campo nome contendo caracteres especiais
-**DADO** que aperte alguma tecla sem querer
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
-
-
- 
-### **Cenário:** preenchimento do e-mail
-
-**Contexto:** o e-mail está correto
-**DADO** o e-mail esteja correto e existe
-**QUANDO** envio o formulário
-**ENTÃO** recebo e-mail para autentificar
-
-**Contexto:** o e-mail não é do cliente
-**DADO** e-mail válido e não seja do usuário
-**QUANDO** tento acessar
-**ENTÃO** sou notificado autenticar no e-mail enviado.
-
-**Contexto:** o e-mail não existe
-**DADO** dado que o e-mail não existe
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
-
-
-
-### **Cenário:** preenchimento da data nascimento
-
-**Contexto:** data de nascimento correta
-**DADO** a data de nascimento esta correta
-**QUANDO** envio o formulário
-**ENTÃO** recebo confirmação de registro
-
-**Contexto:** data vazia
-**DADO** que não tem data
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
-
-**Contexto:** data contem texto
-**DADO** que digitei um texto
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
-
-**Contexto:** formato de preenchimento
-**DADO** preenchi a data em formato errado
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
-
-**Contexto:** data maior que 150 anos
-**DADO** que a data não confere com o real 
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
-
-**Contexto:** data menor que 18 anos
-**DADO** que a idade seja menor que 18 anos
-**E** serviços proibido para menos
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
-
-**Contexto:** data menor que 18 serviços permitido
-**DADO** a idade seja menor 18 anos
-**E** não tenha restrição para menores  
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
+**Contexto:** campo nome contendo caracteres especiais<br/>
+**DADO** que aperte alguma tecla sem querer<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/><br/>
 
 
  
-### **Cenário:** preenchimento de telefone
+### **Cenário:** preenchimento do e-mail<br/><br/><br/>
+
+**Contexto:** o e-mail está correto<br/>
+**DADO** o e-mail esteja correto e existe<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo e-mail para autentificar<br/><br/>
+
+**Contexto:** o e-mail não é do cliente<br/>
+**DADO** e-mail válido e não seja do usuário<br/>
+**QUANDO** tento acessar<br/>
+**ENTÃO** sou notificado autenticar no e-mail enviado.<br/><br/>
+
+**Contexto:** o e-mail não existe<br/>
+**DADO** dado que o e-mail não existe<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/>
+
+
+
+### **Cenário:** preenchimento da data nascimento<br/><br/><br/>
+
+**Contexto:** data de nascimento correta<br/>
+**DADO** a data de nascimento esta correta<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo confirmação de registro<br/><br/>
+
+**Contexto:** data vazia<br/>
+**DADO** que não tem data<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/>
+
+**Contexto:** data contem texto<br/>
+**DADO** que digitei um texto<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/>
+
+**Contexto:** formato de preenchimento<br/>
+**DADO** preenchi a data em formato errado<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/>
+
+**Contexto:** data maior que 150 anos<br/>
+**DADO** que a data não confere com o real <br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/>
+
+**Contexto:** data menor que 18 anos<br/>
+**DADO** que a idade seja menor que 18 anos<br/>
+**E** serviços proibido para menos<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/>
+
+**Contexto:** data menor que 18 serviços permitido<br/>
+**DADO** a idade seja menor 18 anos<br/>
+**E** não tenha restrição para menores  <br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/><br/>
+
+
+ 
+### **Cenário:** preenchimento de telefone<br/><br/>
  
 
-**Contexto:** telefone correto
-**DADO** o telefone correto
-**QUANDO** envio o formulário
-**ENTÃO** recebo mensagem de confirmação
+**Contexto:** telefone correto<br/>
+**DADO** o telefone correto<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo mensagem de confirmação<br/><br/>
 
-**Contexto:** telefone incorreto por caractere
-**DADO** o telefone incorreto
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
+**Contexto:** telefone incorreto por caractere<br/>
+**DADO** o telefone incorreto<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/>
 
-**Contexto:** quantidade de números maior que o padrão
-**DADO** os dígitos são maior
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
+**Contexto:** quantidade de números maior que o padrão<br/>
+**DADO** os dígitos são maior<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/>
 
-**Contexto:** quantidade de números menor que o padrão
-**DADO** os dígitos são menores
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
+**Contexto:** quantidade de números menor que o padrão<br/>
+**DADO** os dígitos são menores<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/><br/>
 
 
-### **Cenário:** preenchimento do CPF
+### **Cenário:** preenchimento do CPF<br/><br/><br/>
 
-**Contexto:** preenchimento correto do CPF
-**DADO** o CPF correto
-**QUANDO** envio o formulário
-**ENTÃO** recebo confirmação
+**Contexto:** preenchimento correto do CPF<br/>
+**DADO** o CPF correto<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo confirmação<br/><br/>
 
-**Contexto:** preenchimento com caractere
-**DADO** o dígito tem caractere
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
+**Contexto:** preenchimento com caractere<br/>
+**DADO** o dígito tem caractere<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/>
 
-**Contexto:** quantidade de números maior que o padrão
-**DADO** os dígitos são maior
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
+**Contexto:** quantidade de números maior que o padrão<br/>
+**DADO** os dígitos são maior<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/>
 
-**Contexto:** quantidade de números menor que o padrão
-**DADO** os dígitos são menores
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma notificação
+**Contexto:** quantidade de números menor que o padrão<br/>
+**DADO** os dígitos são menores<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma notificação<br/><br/>
 
-**Contexto:** CPF é valido de outro proprietário
-**DADO** o CPF é válido porem de outro pessoa
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
+**Contexto:** CPF é valido de outro proprietário<br/>
+**DADO** o CPF é válido porem de outro pessoa<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/>
 
-**Contexto:** CPF não existe
-**DADO** o CPF não existe ao ser consultado
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
+**Contexto:** CPF não existe<br/>
+**DADO** o CPF não existe ao ser consultado<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/><br/>
 
 
  
-**Cenário:** preenchimento de CEP
+**Cenário:** preenchimento de CEP<br/><br/><br/>
 
-**Contexto:** CEP correto
-**DADO** o CEP esteja correto
-**QUANDO** Saio do campo CPF
-**ENTÃO** Os demais endereços carregam automaticamente
+**Contexto:** CEP correto<br/>
+**DADO** o CEP esteja correto<br/>
+**QUANDO** Saio do campo CPF<br/>
+**ENTÃO** Os demais endereços carregam automaticamente<br/><br/>
 
-**Contexto:** dado que o CEP seja de local longe
-**DADO** o Cep não seja da minha região
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem solicitando confirmação
+**Contexto:** dado que o CEP seja de local longe<br/>
+**DADO** o Cep não seja da minha região<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem solicitando confirmação<br/><br/>
 
-**Contexto:** o CEP contem textos
-**DADO** que digitei texto no campo
-**QUANDO** envio o formulário
-**ENTÃO** recebo uma mensagem
+**Contexto:** o CEP contem textos<br/>
+**DADO** que digitei texto no campo<br/>
+**QUANDO** envio o formulário<br/>
+**ENTÃO** recebo uma mensagem<br/><br/>
 
-**Contexto:** o usuário não sabe o CEP e desiste
-**DADO** que não sei o CEP
-**E** Só é possível preencher colocando o CEP
-**ENTÃO** desisto de cadastrar
+**Contexto:** o usuário não sabe o CEP e desiste<br/>
+**DADO** que não sei o CEP<br/>
+**E** Só é possível preencher colocando o CEP<br/>
+**ENTÃO** desisto de cadastrar<br/><br/>
 
-**Contexto:** o usuário não sabe o CEP deseja retornar
-**DADO** que não sei o CEP
-**E** Só é possível preencher colocando o CEP
-**ENTÃO** pesquiso e retorno mais tarde
+**Contexto:** o usuário não sabe o CEP deseja retornar<br/>
+**DADO** que não sei o CEP<br/>
+**E** Só é possível preencher colocando o CEP<br/>
+**ENTÃO** pesquiso e retorno mais tarde<br/><br/><br/>
 
 
-## ***********Não solicitado implementação porem pode ser observado********************
+## ***********Não solicitado implementação porem pode ser observado********************<br/><br/>
 
-#### **Obs: Não foi solicitado número da casa e complemento
+#### **Obs: Não foi solicitado número da casa e complemento<br/>
+
 Impossibilita envio de correspondência. Caso não seja requisito obrigatório, desconsiderar.
-Caso contrário o mesmo fica registrado para possíveis implantações.
+Caso contrário o mesmo fica registrado para possíveis implantações.<br/><br/><br/>
 
 
-**Cenário:** preenchimento do número da casa ou apt.
+**Cenário:** preenchimento do número da casa ou apt.<br/><br/>
 
-**Contexto:**
-**DADO**
-**QUANDO**
-**ENTÃO**
+**Contexto:**<br/>
+**DADO**<br/>
+**QUANDO**<br/>
+**ENTÃO**<br/><br/>
 
-**Cenário:** preenchimento do complemento
+**Cenário:** preenchimento do complemento<br/><br/>
 
-**Contexto:**
-**DADO**
-**QUANDO**
-**ENTÃO**
+**Contexto:**<br/>
+**DADO**<br/>
+**QUANDO**<br/>
+**ENTÃO**<br/><br/>
 
-******************************************************************************************
-
-
-**Cenário:** Atualização de dados feito corretamente
-
-**Contexto:** atualizar dados
-**DADO** preencha correto ao ter autenticado
-**QUANDO** salvo as alterações
-**ENTÃO** fica registrado a data da mudança
-**Contexto:** Atualização de dados feito incorreto
-**DADO** preciso atualizar os dados e não preencha corretamente
-**QUANDO** salvo as alterações
-**ENTÃO** recebo uma mensagem
+******************************************************************************************<br/><br/><br/>
 
 
+**Cenário:** Atualização de dados feito corretamente<br/><br/>
 
-## **Cenário:** Envio do formulário
+**Contexto:** atualizar dados<br/>
+**DADO** preencha correto ao ter autenticado<br/>
+**QUANDO** salvo as alterações<br/>
+**ENTÃO** fica registrado a data da mudança<br/><br/>
+
+**Contexto:** Atualização de dados feito incorreto<br/>
+**DADO** preciso atualizar os dados e não preencha corretamente<br/>
+**QUANDO** salvo as alterações<br/>
+**ENTÃO** recebo uma mensagem<br/><br/><br/>
 
 
-**Contexto:** formulário preenchido corretamente.
-**DADO** que as informações foram preenchidas corretamente.
-**QUANDO** envio o formulário
+
+## **Cenário:** Envio do formulário<br/><br/>
+
+
+**Contexto:** formulário preenchido corretamente.<br/>
+**DADO** que as informações foram preenchidas corretamente.<br/>
+**QUANDO** envio o formulário<br/>
 **ENTÃO** recebo um e-mail, confirmação de cadastro e mensagem de boas-
-Vindas.
-**E** será registrado a data de envio
+Vindas.<br/>
+**E** será registrado a data de envio<br/><br/>
 
-**Contexto:** formulário incorreto
-**DADO** que escrevo errado no formulário
-**QUANDO** aciono o botão de enviar
-**ENTÃO** O formulário mostra os campos incorreto
-**E** não apague os dados correto.
-
-
-
-## **Cenário: perfil de usuário.** 
+**Contexto:** formulário incorreto<br/>
+**DADO** que escrevo errado no formulário<br/>
+**QUANDO** aciono o botão de enviar<br/>
+**ENTÃO** O formulário mostra os campos incorreto<br/>
+**E** não apague os dados correto.<br/><br/><br/>
 
 
-**Contexto:** cliente deficiente
-**DADO** que sou deficiente
-**QUANDO** preencher o formulário
-**ENTÃO** deve ter acessibilidade 
 
-**Contexto:** cliente impaciente
-**DADO** que sou impaciente
-**QUANDO** errar o formulário
-**ENTÃO** não quero reescrever os dados correto.
+## **Cenário: perfil de usuário.** <br/><br/>
 
-**Contexto:** cliente leigo em leitura
-**DADO** que tenho pouco entendimento
-**QUANDO** envio o formulário incorreto
-**ENTÃO** os erros devem estar visíveis
-**E** recebo uma mensagem
+
+**Contexto:** cliente deficiente<br/>
+**DADO** que sou deficiente<br/>
+**QUANDO** preencher o formulário<br/>
+**ENTÃO** deve ter acessibilidade <br/><br/>
+
+**Contexto:** cliente impaciente<br/>
+**DADO** que sou impaciente<br/>
+**QUANDO** errar o formulário<br/>
+**ENTÃO** não quero reescrever os dados correto.<br/><br/>
+
+**Contexto:** cliente leigo em leitura<br/>
+**DADO** que tenho pouco entendimento<br/>
+**QUANDO** envio o formulário incorreto<br/>
+**ENTÃO** os erros devem estar visíveis<br/>
+**E** recebo uma mensagem<br/><br/>
 
