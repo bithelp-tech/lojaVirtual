@@ -11,6 +11,7 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 **PRECISO** preencher meus dados no formulário.<br/>
 <br/><br/>
 
+<hr/>
 
 ### **Cenário:** preenchimento do nome<br/><br/>
 
@@ -57,7 +58,8 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 <br/><br/><br/>
 
 
- 
+ <hr/>
+
 ### **Cenário:** preenchimento do e-mail<br/><br/>
 
 **Contexto:** o e-mail está correto<br/>
@@ -79,6 +81,7 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 <br/><br/><br/>
 
 
+<hr/>
 
 ### **Cenário:** preenchimento da data nascimento<br/><br/>
 
@@ -127,7 +130,8 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 <br/><br/><br/>
 
 
- 
+ <hr/>
+
 ### **Cenário:** preenchimento de telefone<br/><br/>
  
 
@@ -155,6 +159,7 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 <br/><br/><br/>
 
 
+<hr/>
 
 ### **Cenário:** preenchimento do CPF<br/><br/>
 
@@ -195,7 +200,8 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 <br/><br/><br/>
 
 
- 
+ <hr/>
+
 ### **Cenário:** preenchimento de CEP
 <br/><br/>
 
@@ -228,7 +234,7 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 **E** Só é possível preencher colocando o CEP<br/>
 **ENTÃO** pesquiso e retorno mais tarde
 <br/><br/><br/>
-<hr>
+<hr/>
 
 ### **Não solicitado implementação mas pode ser observado**
 <br/><br/>
@@ -238,19 +244,11 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 Impossibilita envio de correspondência. Caso não seja requisito obrigatório, desconsiderar.
 Caso contrário o mesmo fica registrado para possíveis implantações.
 <br/><br/><br/>
-<hr>
+<hr/>
 
+<hr/>
 
-**Cenário:** preenchimento do número da casa ou apt.<br/><br/>
-
-**Contexto:**<br/>
-**DADO**<br/>
-**QUANDO**<br/>
-**ENTÃO**
-<br/><br/>
-
-**Cenário:** preenchimento do complemento
-<br/><br/>
+### **Cenário:** preenchimento do número da casa ou apt.<br/><br/>
 
 **Contexto:**<br/>
 **DADO**<br/>
@@ -258,11 +256,22 @@ Caso contrário o mesmo fica registrado para possíveis implantações.
 **ENTÃO**
 <br/><br/>
 
-******************************************************************************************
+<hr/>
+
+### **Cenário:** preenchimento do complemento
+<br/><br/>
+
+**Contexto:**<br/>
+**DADO**<br/>
+**QUANDO**<br/>
+**ENTÃO**
+<br/><br/>
+
 <br/><br/><br/>
 
+<hr/>
 
-**Cenário:** Atualização de dados feito corretamente<br/><br/>
+### **Cenário:** Atualização de dados feito corretamente<br/><br/>
 
 **Contexto:** atualizar dados<br/>
 **DADO** preencha correto ao ter autenticado<br/>
@@ -276,8 +285,9 @@ Caso contrário o mesmo fica registrado para possíveis implantações.
 **ENTÃO** recebo uma mensagem<br/><br/><br/>
 
 
+<hr/>
 
-## **Cenário:** Envio do formulário<br/><br/>
+### **Cenário:** Envio do formulário<br/><br/>
 
 
 **Contexto:** formulário preenchido corretamente.<br/>
@@ -296,8 +306,9 @@ Vindas.<br/>
 .<br/><br/><br/>
 
 
+<hr/>
 
-## **Cenário: perfil de usuário.** <br/><br/>
+### **Cenário: perfil de usuário.** <br/><br/>
 
 
 **Contexto:** cliente deficiente<br/>
