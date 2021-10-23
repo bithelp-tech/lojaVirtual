@@ -196,7 +196,8 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 
 
  
-**Cenário:** preenchimento de CEP<br/><br/>
+### **Cenário:** preenchimento de CEP
+<br/><br/>
 
 **Contexto:** CEP correto<br/>
 **DADO** o CEP esteja correto<br/>
@@ -227,14 +228,17 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 **E** Só é possível preencher colocando o CEP<br/>
 **ENTÃO** pesquiso e retorno mais tarde
 <br/><br/><br/>
+<hr>
 
+### **Não solicitado implementação mas pode ser observado**
+<br/><br/>
 
-## ***********Não solicitado implementação porem pode ser observado********************<br/><br/>
-
-#### **Obs: Não foi solicitado número da casa e complemento<br/>
+#### **Obs: Não foi solicitado número da casa e complemento:** <br/>
 
 Impossibilita envio de correspondência. Caso não seja requisito obrigatório, desconsiderar.
-Caso contrário o mesmo fica registrado para possíveis implantações.<br/><br/><br/>
+Caso contrário o mesmo fica registrado para possíveis implantações.
+<br/><br/><br/>
+<hr>
 
 
 **Cenário:** preenchimento do número da casa ou apt.<br/><br/>
