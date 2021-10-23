@@ -17,7 +17,7 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 
 **ENTÃO** alguns campos devem ter auto preenchimento.
 
-**E  **informar quais erros estão sendo cometidos.
+**E**informar quais erros estão sendo cometidos.
 
 **ENTÃO** não quero ter que reescrever toda vez que envio o formulário 
 
@@ -31,7 +31,7 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 
 **QUANDO**  submeto o formulário
 
-**ENTÃO ** ganho um registro no sistema que escolhi. 
+**ENTÃO** ganho um registro no sistema que escolhi. 
 
 **E** recebo uma mensagem: "Cadastro realizado com sucesso, obrigado!"
 
@@ -45,7 +45,7 @@ Etapa processo seletivo Loja Virtual - Segunda Etapa
 
 **E** Não quero ter que preencher tudo novamente. Desejo que tudo que eu já escrevi permaneça nos campos mesmo após submeter o formulário.
 
-**E **que tenha a funcionalidade de mostrar os erros que cometi para que possam ser corrigidos.  
+**E**que tenha a funcionalidade de mostrar os erros que cometi para que possam ser corrigidos.  
 
 
 
