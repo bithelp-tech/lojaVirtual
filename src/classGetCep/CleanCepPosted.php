@@ -7,6 +7,10 @@ class CleanCepPosted
     private $cepToApplyViaCepApi;
     private $isCepStarted=false;
 
+    public function getCep(){
+        return $this->cepToApplyViaCepApi;
+    }   
+
     public function cleanCep($cepTypedByUser)
     {        
         if(!empty($cepTypedByUser) || !isset($cepTypedByUser)){
@@ -16,11 +20,11 @@ class CleanCepPosted
 
             $cepTypedCounted=count($cepChangedToArrayToBeCounted);
 
-            if($cepTypedCounted=8){
+            if($cepTypedCounted==8){
 
                 $this->isCepStarted=true;
 
-                $this->$cepToApplyViaCepApi=
+                $this->cepToApplyViaCepApi=
                 $cepChangedToArrayToBeCounted[0].
                 $cepChangedToArrayToBeCounted[1].
                 $cepChangedToArrayToBeCounted[2].
@@ -30,16 +34,21 @@ class CleanCepPosted
                 $cepChangedToArrayToBeCounted[6].
                 $cepChangedToArrayToBeCounted[7];
 
-            }elseif($cepTypedCounted<8){ $this->cepToApplyViaCepApi="A digitação é menor que um Cep";            
-            }elseif($cepTypedCounted>8){ $this->cepToApplyViaCepApi="A digitação é maior que um Cep";
-
-            }else{
-                $this->$cepToApplyViaCepApi="Campo vazio ou erro desconhecido";            
+            }elseif($cepTypedCounted<8){ $this->cepToApplyViaCepApi="Os números da digitação é menor que um Cep";            
+            }elseif($cepTypedCounted>8){ $this->cepToApplyViaCepApi="Os números da digitação é maior que um Cep";
             }
+        }else{
+            $this->cepToApplyViaCepApi="Campo vazio ou erro desconhecido";            
         } 
-    }
-    
+    }    
 }
+
+$fin = new CleanCepPosted();
+$fin->cleanCep("safasf15654565");
+$cep = $fin->getCep();
+print_r($cep);
+
+
 
 
 
