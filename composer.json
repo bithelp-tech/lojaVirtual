@@ -1,0 +1,15 @@
+{
+    "name": "lideranca/loja-virtual",
+    "autoload": {
+        "psr-4": {
+            "Lideranca\\LojaVirtual\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luis Carlos",
+            "email": "luiscarlos@githelp.tech"
+        }
+    ],
+    "require": {}
+}
