@@ -33,10 +33,12 @@ class CleanCepPosted
             }elseif($cepTypedCounted<8){ $this->cepToApplyViaCepApi="A digitação é menor que um Cep";            
             }elseif($cepTypedCounted>8){ $this->cepToApplyViaCepApi="A digitação é maior que um Cep";
 
-        }else{
-            $this->$cepToApplyViaCepApi="Campo vazio ou erro desconhecido";            
-        }
+            }else{
+                $this->$cepToApplyViaCepApi="Campo vazio ou erro desconhecido";            
+            }
+        } 
     }
+    
 }
 
 
