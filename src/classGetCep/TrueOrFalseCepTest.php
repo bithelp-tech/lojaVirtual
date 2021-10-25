@@ -1,6 +1,6 @@
 <?php
 
-namespace getCepUrl\TrueOrFalseCepTest;
+namespace lojavirtual\classGetCep;
 
 class TrueOrFalseCepTest{
     

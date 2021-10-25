@@ -1,6 +1,6 @@
 <?php
 
-namespace getCepUrl\classGetCEP;
+namespace lojavirtual\classGetCep;
 
 class CleanCepPosted
 {
@@ -42,15 +42,6 @@ class CleanCepPosted
         } 
     }    
 }
-
-$fin = new CleanCepPosted();
-$fin->cleanCep("safasf15654565");
-$cep = $fin->getCep();
-print_r($cep);
-
-
-
-
 
 //$url="https://viacep.com.br/ws/36071270/json/";
 //$address =  json_decode(file_get_contents($url));
