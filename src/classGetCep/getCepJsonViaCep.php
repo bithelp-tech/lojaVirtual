@@ -20,8 +20,3 @@ class getCepJsonViaCep
 
     }
 }
-
-//$inicio=new getCepJsonViaCep();
-//$inicio->lookForAdressCepJsonByViaCep("36071270");
-//$inicio->getClientAddressJsonByViaCep;
-//print_r($inicio);

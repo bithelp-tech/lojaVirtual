@@ -6,6 +6,9 @@ class CleanCepPosted
 {
     private $cepToApplyViaCepApi;
     private $isCepStarted=false;
+    function __construct(){
+        echo "ok";
+    }
 
     public function getCep(){
         return $this->cepToApplyViaCepApi;
