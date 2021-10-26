@@ -8,14 +8,16 @@ class RequestServiceReceiptToBeHandled
 
     public function __construct($cepStartService){
         $this->ViaCepServiceJsonRequest($cepStartService);
-        //$this->getJson();
+        
     }
 
-    public function ViaCepServiceJsonRequest($cep){
+    public function ViaCepServiceJsonRequest($cep){        
 
         $url="https://viacep.com.br/ws/$cep/json/";
-        $getService=file_get_contents($url);              
-        $this->requestServiceReturn = $getService;        
+        $getService=file_get_contents($url);
+        if(!isset($getService)){$this->requestServiceReturn = $getService;
+        }else{return "Fala ao digitar, tente novamente";
+        }                
     }
 
     public function getJson(){

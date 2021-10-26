@@ -1,0 +1,101 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    border:0;
+    vertical-align: baseline;
+    list-style: none;    
+}
+root{
+font-size:67%;
+}
+main{
+    background:rgb(2, 0, 5);
+}
+
+html > body{
+    width:calc(100% - 20px);    
+    margin:10px;
+    align-content: center;
+            
+}
+
+body > header > nav > ul{
+    color:#ffffff;    
+    display:flex;   
+    justify-content: space-between;   
+    flex-flow: wrap; 
+    block-size: auto;
+    position:relative;ali
+    
+     
+}
+
+p,h1,h2,h3,h4,h5,h6,ul,ol{
+    margin:10px 10px;
+    color:#ffffff;
+}
+
+input,label{
+    height:30px;
+    width:100%;
+}
+
+input{
+background:rgb(175, 223, 235);
+text-align:center;
+color: #ffffff;
+}
+
+label{
+    background:rgb(32, 1, 6);    
+    width:100%;
+    margin-top:20px;
+    display:inline-block;
+    height:5vh;
+    color:white;
+    
+}
+
+header{    
+    display:block;
+    text-align:center;
+}
+
+ul > li > ul{
+    display:none;
+    color:rgb(159, 197, 159);
+}
+
+ul > li > ul:hover{
+    display:block;
+    color:#ffffff;
+}
+
+input[type="date" i]{
+width:100%;
+background:rgba(255,255,255,255.9);
+font-size:2em;
+}
+
+#submit{
+    margin-top:30px;
+    height:60px;
+    font-size: 1.5rem;
+    background:rgb(97, 5, 5);
+    color:white;
+}
+nav{
+    background:black;
+    height:10vh;
+    
+}
+
+
+@media screen and (min-width: 600px) {
+
+html{    
+max-width:50vw;
+margin-left:25%;
+}
+
+}

@@ -4,7 +4,7 @@ namespace lojavirtual\classGetCep;
 
 class CepEntryTreatment
 {
-    private $cepToApplyViaCepApi;
+    public $cepToApplyViaCepApi;
 
     public function __construct($numberClient){
          $this->cleanCep($numberClient);
