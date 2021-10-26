@@ -1,6 +1,6 @@
 <?php
 
-namespace lojavirtual\src\classGetCep;
+namespace lojavirtual\classGetCep;
 
 require __DIR__.'/../../vendor/autoload.php';
 
@@ -8,21 +8,30 @@ use lojavirtual\classGetCep\CepEntryTreatment;
 use lojavirtual\classGetCep\RequestServiceReceiptToBeHandled;
 use lojavirtual\classGetCep\GetServiceValues;
 
+class Module_viaCepApiRequest{
 
-    $a=new CepEntryTreatment("36060440");    
-    $requesService=new RequestServiceReceiptToBeHandled($a->cepToApplyViaCepApiecho);
-    $ceJson=$requesService->requestServiceReturn;
-    $cepKey=json_decode($ceJson);
-    $return=$cepKey->logradouro;
-    echo $return;
+    public $cepStructure;
 
+    public function __construct($cep){
+        $this->getGeneralCep($cep);
 
-echo"<pre>************************\n";
-
-    print_r($cepKey);
-echo"</pre>************************\n";
-echo"<pre>************************\n";
-
-    print_r($requesService);
-echo"</pre>************************\n";
+    }
     
+    
+    public function getGeneralCep(){
+        $a=new CepEntryTreatment("36060440");    
+        $requesService=new RequestServiceReceiptToBeHandled($a->cepToApplyViaCepApiecho);
+        $ceJson=$requesService->requestServiceReturn;
+        $cepKey=json_decode($ceJson);
+        $this->cepStructure=$cepKey;        
+    }
+
+    public function getAddress(){
+        $key=$this->cepStructure;
+        $getKey=$key->cep;
+        $this->cepStructure=$getKey;
+        return $this->cepStructure;
+
+    }
+
+}
