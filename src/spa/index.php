@@ -57,7 +57,7 @@ use lojavirtual\classGetCep\Module_viaCepApiRequest;
     <section>               
         <header>
             <h2>
-                    Seja nosso cliente! Cadastre agora! 
+                    Seja nosso cliente!<br/>Cadastre agora! 
             </h2> 
         </header>
         <p>
@@ -80,7 +80,7 @@ use lojavirtual\classGetCep\Module_viaCepApiRequest;
             <label  for="date">         Data de Nascimento:                              </label>     <br/>
             <input  id="date"           name="date"         type="date"     value=""
                                         placeholder=       "Digite o dia que nasceu"     required/>   <br/>         
-            <label  for="tel">          Telefone:                                        </lavel>     <br/>
+            <label  for="tel">          Telefone:                                        </label>     <br/>
             <input  id="tel"            name="tel"          type="tel"      value=""
                     placeholder=       "Digite o seu telefone"                           required/>   <br/>
             <label  for="cpf">          CPF:                                              </label>     <br/>
