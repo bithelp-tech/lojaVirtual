@@ -5,9 +5,9 @@ function base64ErlEncode($data){
 }
 
 $header = base64ErlEncode('{"alg":"HS256","typ":"JWT"}');
-$payload=base64ErlEncode('{"sub":"representante,"name":"usuario","iat":"Administrador"}');
+$payload=base64ErlEncode('{"sub":"'.md5(time()).'","name":"Luis Carlos", "iat":'.time().'}');
 $signature=base64ErlEncode(
-    hash_hmac('sha256', $header.'.'.$payload,'luis', true)
+    hash_hmac('sha256', $header.'.'.$payload,'segredão', true)
 );
 
 echo $header.'.'.$payload.'.'.$signature;

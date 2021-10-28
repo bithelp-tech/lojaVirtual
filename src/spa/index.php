@@ -6,6 +6,8 @@ require __DIR__.'/../../vendor/autoload.php';
 
 use lojavirtual\classGetCep\Module_viaCepApiRequest;
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -133,3 +135,4 @@ echo $endereço;
 echo"<pre>";
 print_r($endereço);
 echo"</pre>";
+?>

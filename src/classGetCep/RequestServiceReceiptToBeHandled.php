@@ -16,7 +16,7 @@ class RequestServiceReceiptToBeHandled
         $url="https://viacep.com.br/ws/$cep/json/";
         $getService=file_get_contents($url);
         if(!isset($getService)){$this->requestServiceReturn = $getService;
-        }else{return "Fala ao digitar, tente novamente";
+        }else{return "Falha ao digitar, tente novamente";
         }                
     }
 
